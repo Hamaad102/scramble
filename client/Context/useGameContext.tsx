@@ -19,7 +19,7 @@ interface IGameContext {
 	startGame: (lobby: string) => void
 	targetWords: Array<string>
 	currentTarget: number
-	gameOver: (lobbyName: string) => void
+	gameOver: (lobbyName: string, finalScore: number) => void
 	newGame: () => void
 	playAgain: (lobbyName: string) => void
 }
@@ -82,46 +82,43 @@ export const GameProvider: FunctionComponent = ({ children }): JSX.Element => {
 		switch (rows) {
 			case 0:
 				newScore = score + 10
-				setScore(newScore)
 				break
 			case 1:
 				newScore = score + 5
-				setScore(newScore)
 				break
 			case 2:
 				newScore = score + 4
-				setScore(newScore)
 				break
 			case 3:
 				newScore = score + 3
-				setScore(newScore)
 				break
 			case 4:
 				newScore = score + 2
-				setScore(newScore)
 				break
 			case 5:
 				newScore = score + 1
-				setScore(newScore)
-				break
-			default:
 				break
 		}
+		setScore(newScore)
 		if (wordLimit !== currentTarget + 1) setCurrentTarget(currentTarget + 1)
-		else gameOver(lobbyName)
+		else gameOver(lobbyName, newScore)
 	}
 
 	// Score is sent to server and user is redirected to scoreboard
-	const gameOver = (lobbyName: string) => {
-		socket.off('game_over').emit('game_over', { lobby: lobbyName, score, host })
+	const gameOver = (lobbyName: string, finalScore: number) => {
+		socket
+			.off('game_over')
+			.emit('game_over', { lobby: lobbyName, score: finalScore, host })
 		router.push(`${asPath}/scoreboard`)
 	}
 
 	// Player hits either start new game or return to lobby
 	// If player hits return to lobby we don't want them to load in before opponent makes their mind otherwise they'll
 	// Be able to start a new game with no one
-	const playAgain = (lobbyName: string) =>
+	const playAgain = (lobbyName: string) => {
+		setScore(0)
 		socket.off('play_again').emit('play_again', { lobby: lobbyName })
+	}
 
 	// Resets game variables to default
 	const newGame = () => {

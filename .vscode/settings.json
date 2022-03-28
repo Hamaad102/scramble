@@ -1,6 +1,6 @@
 {
 	"files.exclude": {
-		"client/.gitignore": true,
+		"client/.gitignore": false,
 		"client/next.config.js": true,
 		"client/next-env.d.ts": true,
 		"client/package-lock.json": true,

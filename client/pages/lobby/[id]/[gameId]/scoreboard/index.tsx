@@ -180,7 +180,9 @@ const Scoreboard: NextPage = () => {
 									>
 										{username}
 									</Typography>
-									<Typography variant='h4'>{score}</Typography>
+									<Typography variant='h4' sx={{ color: 'secondary.light' }}>
+										{score}
+									</Typography>
 								</Stack>
 								{opponent === '' ? (
 									<></>
@@ -199,7 +201,9 @@ const Scoreboard: NextPage = () => {
 										>
 											{opponent}
 										</Typography>
-										<Typography variant='h4'>{opponentScore}</Typography>
+										<Typography variant='h4' sx={{ color: 'secondary.light' }}>
+											{opponentScore}
+										</Typography>
 									</Stack>
 								)}
 							</Stack>

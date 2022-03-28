@@ -19,6 +19,7 @@ let darkThemeOptions = createTheme({
 		},
 		success: {
 			main: '#14FC9C',
+			light: 'white',
 		},
 		warning: {
 			main: '#FFBC42',

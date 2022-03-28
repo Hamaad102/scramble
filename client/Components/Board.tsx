@@ -51,7 +51,7 @@ function Board(props: Props): JSX.Element {
 					<Typography
 						variant='h4'
 						sx={{
-							color: 'seondary.main',
+							color: 'success.light',
 						}}
 					>
 						{guessHistory[props.guessRow][0]
@@ -72,7 +72,12 @@ function Board(props: Props): JSX.Element {
 							: 'secondary.light',
 					}}
 				>
-					<Typography variant='h4'>
+					<Typography
+						variant='h4'
+						sx={{
+							color: 'success.light',
+						}}
+					>
 						{guessHistory[props.guessRow][1]
 							? guessHistory[props.guessRow][1].letter
 							: ''}
@@ -91,7 +96,12 @@ function Board(props: Props): JSX.Element {
 							: 'secondary.light',
 					}}
 				>
-					<Typography variant='h4'>
+					<Typography
+						variant='h4'
+						sx={{
+							color: 'success.light',
+						}}
+					>
 						{guessHistory[props.guessRow][2]
 							? guessHistory[props.guessRow][2].letter
 							: ''}
@@ -110,7 +120,12 @@ function Board(props: Props): JSX.Element {
 							: 'secondary.light',
 					}}
 				>
-					<Typography variant='h4'>
+					<Typography
+						variant='h4'
+						sx={{
+							color: 'success.light',
+						}}
+					>
 						{guessHistory[props.guessRow][3]
 							? guessHistory[props.guessRow][3].letter
 							: ''}
@@ -129,7 +144,12 @@ function Board(props: Props): JSX.Element {
 							: 'secondary.light',
 					}}
 				>
-					<Typography variant='h4'>
+					<Typography
+						variant='h4'
+						sx={{
+							color: 'success.light',
+						}}
+					>
 						{guessHistory[props.guessRow][4]
 							? guessHistory[props.guessRow][4].letter
 							: ''}

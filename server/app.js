@@ -14,7 +14,10 @@ const server = http.createServer(app)
 
 const io = new Server(server, {
 	cors: {
-		origin: ['http://localhost:3000'],
+		origin: [
+			'http://localhost:3000',
+			'https://moonlit-pothos-4e915b.netlify.app',
+		],
 		methods: ['GET', 'POST'],
 	},
 })
@@ -54,7 +57,7 @@ io.on('connection', (socket) => {
 		socket.leave(socket.id)
 		activeLobbies[uniqueName] = {
 			players: {
-				[socket.id]: { username: data.username, score: 0 },
+				[socket.id]: { username: data.username },
 			},
 			time_limit: 1,
 			word_limit: 6,

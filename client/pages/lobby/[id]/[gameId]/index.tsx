@@ -36,7 +36,7 @@ const Game: NextPage = () => {
 	// Context
 	const { darkMode } = useSettings()
 	const { updateJoinError, lobbyName } = useSocket()
-	const { targetWords, timeLimit, gameOver } = useGame()
+	const { targetWords, timeLimit, gameOver, score } = useGame()
 	const { updateWord, deleteWord, submit, guessHistory, row } = useGuess()
 
 	// State
@@ -112,7 +112,7 @@ const Game: NextPage = () => {
 			}, 1000)
 			return () => clearInterval(interval)
 		}
-		if (seconds === 0) gameOver(lobbyName)
+		if (seconds === 0) gameOver(lobbyName, score)
 	}, [timer, seconds])
 
 	// Recognize keyboard inputs

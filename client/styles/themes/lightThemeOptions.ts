@@ -26,6 +26,7 @@ let lightThemeOptions = createTheme({
 		},
 		success: {
 			main: '#008148',
+			light: '#011C26',
 		},
 		warning: {
 			main: '#FDE74C',
