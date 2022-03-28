@@ -1,0 +1,14 @@
+{
+	"files.exclude": {
+		"client/.gitignore": true,
+		"client/next.config.js": true,
+		"client/next-env.d.ts": true,
+		"client/package-lock.json": true,
+		"client/README.md": true,
+		"client/node_modules": true,
+		"client/package.json": false,
+		"client/.eslintrc.json": true,
+		"client/tsconfig.json": true,
+		"client/.next": true
+	}
+}
