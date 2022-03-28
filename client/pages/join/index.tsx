@@ -23,8 +23,9 @@ import {
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos'
 
 // Context
-import { useSettings } from '../../Context/useSettingsContext'
+import { useGuess } from '../../Context/useGuessContext'
 import { useSocket } from '../../Context/useSocketContext'
+import { useSettings } from '../../Context/useSettingsContext'
 
 // Themes
 import light from '../../styles/themes/lightThemeOptions'
@@ -40,6 +41,7 @@ import { SmallButton, MainButton, CustomInput } from '../../styles/size'
 
 const Join: NextPage = () => {
 	const { darkMode } = useSettings()
+	const { defaultGuess } = useGuess()
 	const {
 		filter,
 		updateFilter,
@@ -61,7 +63,10 @@ const Join: NextPage = () => {
 	const handleJoinClose = () => setJoinOpen(false)
 
 	//State
-	const handleErrorClose = () => updateJoinError('')
+	const handleErrorClose = () => {
+		updateJoinError('')
+		defaultGuess()
+	}
 
 	// @ts-ignore
 	const updatePassword = (e: ChangeEvent) => setUserPass(e.target.value)
