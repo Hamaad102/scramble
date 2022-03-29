@@ -34,19 +34,17 @@ A different take on that very popular browser based game involving words. Play w
 ### Demo
 
 1. Homepage available in dark and light mode
-![Screenshot (2)](https://user-images.githubusercontent.com/18343242/160507059-07bc1bca-f7ff-4997-8a20-7cb527ebfbc8.png)
-![Screenshot (3)](https://user-images.githubusercontent.com/18343242/160507065-c1033f46-b33e-44ed-93cd-491d5cd8be3c.png)
+![Screenshot (2)](https://user-images.githubusercontent.com/18343242/160507316-c034f27d-d701-443a-96f1-3932fb85d560.png)
+![Screenshot (3)](https://user-images.githubusercontent.com/18343242/160507335-b950ed5d-f45d-4e4e-82ad-164a084a1c9d.png)
 
 2. Create a lobby
-![Screenshot (4)](https://user-images.githubusercontent.com/18343242/160507101-430ed876-4714-459f-86b6-f84629f442d6.png)
+![Screenshot (4)](https://user-images.githubusercontent.com/18343242/160507368-772c8714-100e-4bee-9eaf-f9b05eb1f3a2.png)
 
 3. Join a lobby
-![Screenshot (5)](https://user-images.githubusercontent.com/18343242/160507110-3a922b64-a168-4eb3-a3e8-67be97757dc7.png)
+![Screenshot (5)](https://user-images.githubusercontent.com/18343242/160507548-b78994df-d831-4f77-8c38-7389e470741c.png)
 
 4. Lobby screen where you can adjust the settings and start the game
-![Screenshot (6)](https://user-images.githubusercontent.com/18343242/160507152-2d088af0-a477-427f-a939-5e22663b677f.png)
+![Screenshot (6)](https://user-images.githubusercontent.com/18343242/160507560-eca1684c-437b-4f30-88a5-40dbef44d130.png)
 
 5. Winner screen
-![Screenshot (7)](https://user-images.githubusercontent.com/18343242/160507166-02bf0b23-708f-48e4-ab5b-9a025e86213e.png)
-
-
+![Screenshot (7)](https://user-images.githubusercontent.com/18343242/160507576-93a00c7d-f4f5-43b9-8b7c-a57b2824889f.png)
